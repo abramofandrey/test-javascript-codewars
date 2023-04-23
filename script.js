@@ -93,6 +93,14 @@ function betterThanAverage(classPoints, yourPoints) {
     const average = sum / classPoints.length;
     return yourPoints > average;
   }
+
+  //Использование метода map и метода reduce:
+  function betterThanAverage(classPoints, yourPoints) {
+    const sum = classPoints.map((point) => point).reduce((acc, val) => acc + val);
+    const average = sum / classPoints.length;
+    return yourPoints > average;
+  }
+  
   
   
   
