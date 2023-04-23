@@ -38,3 +38,17 @@ const summationNum = (num) => {
     return Array.from({ length: num }, (_, i) => i + 1).reduce((acc, cur) => acc + cur, 0);
   };
   
+  // 3. В вашем классе был тест, и вы его прошли. Поздравляем! Но вы амбициозный человек. Вы хотите знать, лучше ли вы, чем средний ученик в вашем классе. Вы получаете массив с результатами тестов ваших сверстников. Теперь посчитайте среднее и сравните свой результат! Верните True, если вам лучше, иначе False! Примечание: Ваши баллы не включены в массив баллов вашего класса. Для расчета среднего балла вы можете добавить свой балл в данный массив!
+
+  function betterThanAverage(classPoints, yourPoints) {
+    // Сначала вычисляем сумму всех баллов в классе
+    const sum = classPoints.reduce((total, point) => total + point, 0);
+    // Затем вычисляем средний балл в классе
+    const average = sum / classPoints.length;
+    // Вычисляем, выше ли ваш балл среднего балла в классе
+    return yourPoints > average;
+  }
+  const classPoints = [65, 75, 85, 95];
+const yourPoints = 90;
+const result = betterThanAverage(classPoints, yourPoints);
+console.log(result); // true
