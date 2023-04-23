@@ -52,3 +52,11 @@ const summationNum = (num) => {
 const yourPoints = 90;
 const result = betterThanAverage(classPoints, yourPoints);
 console.log(result); // true
+
+//Использование метода reduce:
+function betterThanAverage(classPoints, yourPoints) {
+    const sum = classPoints.reduce((acc, val) => acc + val);
+    const average = sum / classPoints.length;
+    return yourPoints > average;
+  }
+  
