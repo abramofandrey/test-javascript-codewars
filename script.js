@@ -76,6 +76,14 @@ function betterThanAverage(classPoints, yourPoints) {
     const average = sum / classPoints.length;
     return yourPoints > average;
   }
+
+  //Использование метода reduceRight:
+  function betterThanAverage(classPoints, yourPoints) {
+    const sum = classPoints.reduceRight((acc, val) => acc + val);
+    const average = sum / classPoints.length;
+    return yourPoints > average;
+  }
+  
   
   
   
