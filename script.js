@@ -59,4 +59,13 @@ function betterThanAverage(classPoints, yourPoints) {
     const average = sum / classPoints.length;
     return yourPoints > average;
   }
+
+  //Использование метода forEach:
+  function betterThanAverage(classPoints, yourPoints) {
+    let sum = 0;
+    classPoints.forEach((point) => sum += point);
+    const average = sum / classPoints.length;
+    return yourPoints > average;
+  }
+  
   
