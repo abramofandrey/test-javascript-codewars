@@ -110,4 +110,11 @@ const words = ['привет', 'мир', 'это', 'есть', 'отлично']
 const sentence = smash(words);
 console.log(sentence);
 
+//4.1 используя метод join
+smash = function (words) {
+  return words.join(" ");
+};
+
+console.log(smash(words));
+
 
